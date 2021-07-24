@@ -1,7 +1,6 @@
 public interface RecordOfGoods {
-    public void putProductIntoStorrage();
 
-    public void removeProductFromStorrage();
-
+    public void putProductIntoStorage(Product product,int quantity);
+    public void removeProductFromStorage();
 
 }

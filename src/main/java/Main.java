@@ -11,16 +11,16 @@ public class Main {
 
 
         // iterowanie po kluczach
-        for (String names : products.keySet()) {
-            System.out.println(names);
+        for (String product : products.keySet()) {
+            System.out.println(product);
         }
         // iterowanie po wartosciach
-        for (String job : products.values()) {
-            System.out.println(job);
+        for (String quantity : products.values()) {
+            System.out.println(quantity);
         }
         // iterowanie po parach
         for (Map.Entry<String, String> pair: products.entrySet()){
-            System.out.println("Produkt: " + pair.getKey() + "; Ilosc " + pair.getValue());
+            System.out.println("Product: " + pair.getKey() + "; Quantity: " + pair.getValue());
         }
         System.out.println(products);
     }
