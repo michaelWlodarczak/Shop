@@ -12,6 +12,7 @@ public class Storage implements RecordOfGoods {
             } else {
                 productStorage.put(product, quantity);
             }
+        System.out.println(productStorage.size());
     }
 
     @Override

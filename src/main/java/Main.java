@@ -3,25 +3,12 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        Map<String, String> products = new HashMap<>();
-        products.put("jabłko", "2");
-        products.put("gruszka", "6");
-        products.put("winogrona","10");
-        products.put("cytryna","15");
+        Product product1 = new Product("1","apple",3.5,ProductCategory.GROCERIES);
+        Product product2 = new Product("2","Domestos",15.5,ProductCategory.CHEMICALS);
 
-
-        // iterowanie po kluczach
-        for (String product : products.keySet()) {
-            System.out.println(product);
-        }
-        // iterowanie po wartosciach
-        for (String quantity : products.values()) {
-            System.out.println(quantity);
-        }
-        // iterowanie po parach
-        for (Map.Entry<String, String> pair: products.entrySet()){
-            System.out.println("Product: " + pair.getKey() + "; Quantity: " + pair.getValue());
-        }
-        System.out.println(products);
+        Storage storage = new Storage();
+        storage.putProductIntoStorage(product1,5);
+        storage.putProductIntoStorage(product2,10);
+        storage.productStorage.forEach((k, v) -> System.out.println(k + " " + v));
     }
 }
