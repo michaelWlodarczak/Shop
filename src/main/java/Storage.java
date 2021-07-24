@@ -1,21 +1,26 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class Storage implements RecordOfGoods{
-    Map<Product,Integer> productStorage = new HashMap<>();
+public class Storage implements RecordOfGoods {
+    Map<Product, Integer> productStorage = new HashMap<>();
 
     @Override
     public void putProductIntoStorage(Product product, int quantity) {
         for (Product product1 : productStorage.keySet())
-            if (product1.equals(product)){
-                productStorage.put(product,productStorage.get(product)+quantity);
-            }else {
-                productStorage.put(product,quantity);
+            if (product1.equals(product)) {
+                productStorage.put(product, productStorage.get(product) + quantity);
+            } else {
+                productStorage.put(product, quantity);
             }
     }
 
     @Override
-    public void removeProductFromStorage() {
-
+    public void removeProductFromStorage(Product product, int quantity) {
+        for (Product product1 : productStorage.keySet())
+            if (product1.equals(product)){
+                productStorage.remove(product,productStorage.get(product)-quantity);
+            }else {
+                System.out.println("No product inside storage");
+            }
     }
 }
