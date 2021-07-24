@@ -12,6 +12,38 @@ public class Product {
         this.productCategory = productCategory;
     }
 
+    public String getIdOfProduct() {
+        return IdOfProduct;
+    }
+
+    public void setIdOfProduct(String idOfProduct) {
+        IdOfProduct = idOfProduct;
+    }
+
+    public String getNameOfProduct() {
+        return nameOfProduct;
+    }
+
+    public void setNameOfProduct(String nameOfProduct) {
+        this.nameOfProduct = nameOfProduct;
+    }
+
+    public double getPriceOfProduct() {
+        return priceOfProduct;
+    }
+
+    public void setPriceOfProduct(double priceOfProduct) {
+        this.priceOfProduct = priceOfProduct;
+    }
+
+    public ProductCategory getProductCategory() {
+        return productCategory;
+    }
+
+    public void setProductCategory(ProductCategory productCategory) {
+        this.productCategory = productCategory;
+    }
+
     @Override
     public String toString() {
         return "Product{" +

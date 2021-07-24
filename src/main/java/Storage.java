@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Storage implements RecordOfGoods {
-    Map<Product, Integer> productStorage = new HashMap<>();
+    public Map<Product, Integer> productStorage = new HashMap<>();
 
     @Override
     public void putProductIntoStorage(Product product, int quantity) {
@@ -26,5 +26,9 @@ public class Storage implements RecordOfGoods {
             System.out.println("No product inside storage");
         }
         System.out.println(productStorage.size());
+    }
+
+    public Map<Product,Integer> getStorage(){
+        return productStorage;
     }
 }
