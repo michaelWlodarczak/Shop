@@ -10,5 +10,8 @@ public class Main {
         storage.putProductIntoStorage(product1,5);
         storage.putProductIntoStorage(product2,10);
         storage.productStorage.forEach((k, v) -> System.out.println(k + " " + v));
+        storage.putProductIntoStorage(product2,5);
+        storage.productStorage.forEach((k, v) -> System.out.println(k + " " + v));
+
     }
 }
