@@ -34,10 +34,21 @@ public class Main {
                     System.out.println ("Number of products");
                     int count = Integer.valueOf (scanner.nextLine ());
                     storage.putProductIntoStorage (prodcut, count);
+                    break;
+                case 2:
+                    System.out.println ("Enter product name ");
+                    String name1 = scanner.nextLine ();
+                    System.out.println ("How many products to remove");
+                    int num = Integer.valueOf (scanner.nextLine ());
+                    storage.removeProductFromStorage (name1, num);
+                    break;
+                case 3:
+                    //Michala metoda
+                    break;
+                case 4:
 
-            case 2:
-
-            }}
+            }
+        }
     }
 }
 
