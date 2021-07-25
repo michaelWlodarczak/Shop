@@ -3,10 +3,10 @@ import java.util.Map;
 
 public class Shop implements CartsMethods {
     Map<Product, Integer> shopCart = new HashMap<>();
-Storage storage;
-public Shop(Storage storage){
-this.storage=storage;
-};
+    Storage storage;
+    public Shop(Storage storage){
+        this.storage=storage;
+    };
 
 
     @Override
