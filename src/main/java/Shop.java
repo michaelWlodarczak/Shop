@@ -3,16 +3,19 @@ import java.util.Map;
 
 public class Shop implements CartsMethods {
     Map<Product, Integer> shopCart = new HashMap<>();
-Storage storage;
-public Shop(Storage storage){
-this.storage=storage;
-};
+    Storage storage;
+
+    public Shop(Storage storage) {
+        this.storage = storage;
+    }
+
+    ;
 
 
     @Override
     public void addItemsIntoCart(Product product, int quantity) {
-        if (storage.getStorage ().keySet ().contains(product)) {
-            if (storage.getStorage ().get(product) - quantity < 0) {
+        if (storage.getStorage().keySet().contains(product)) {
+            if (storage.getStorage().get(product) - quantity < 0) {
                 System.out.println("Not enough items inside storage. Available products inside storage: " + storage.productStorage.get(product));
             } else {
                 shopCart.put(product, quantity);
@@ -31,5 +34,13 @@ this.storage=storage;
         }
         return finalPrice;
     }
+
+    @Override
+    public void displayStorage(Map<Product, Integer> storageMap) {
+        for (Map.Entry<Product, Integer> pair : storageMap.entrySet()) {
+            System.out.println("Name: " + pair.getKey() + "; Remain quantity: " + pair.getValue());
+        }
+    }
+
 
 }
