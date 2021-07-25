@@ -13,36 +13,36 @@ public class Main {
                 "3.Display list of products\n" +
                 "4.Add product to recip\n" +
                 "5.Displey recip\n";
-        final Scanner scanner = new Scanner (System.in);
-        Storage storage = new Storage ();
-        Shop shop = new Shop (storage);
+        final Scanner scanner = new Scanner(System.in);
+        Storage storage = new Storage();
+        Shop shop = new Shop(storage);
         while (true) {
             int number;
-            System.out.println ();
-            System.out.println (menu);
-            number = Integer.valueOf (scanner.nextLine ());
+            System.out.println();
+            System.out.println(menu);
+            number = Integer.valueOf(scanner.nextLine());
             switch (number) {
                 case 1:
-                    System.out.println ("Enter product id");
-                    String id = scanner.nextLine ();
-                    System.out.println ("Enter name of Product");
-                    String name = scanner.nextLine ();
-                    System.out.println ("Enter price of product");
-                    Double price = Double.valueOf (scanner.nextLine ());
-                    System.out.println ("Enter type of product(GROCERIES, CHEMICALS, ELECTRONICS");
-                    String type = scanner.nextLine ();
-                    Product prodcut = new Product (id, name, price, (ProductCategory.valueOf (type.toUpperCase (Locale.ROOT).trim ())));
-                    System.out.println ("Number of products");
-                    int count = Integer.valueOf (scanner.nextLine ());
-                    storage.putProductIntoStorage (prodcut, count);
+                    System.out.println("Enter product id");
+                    String id = scanner.nextLine();
+                    System.out.println("Enter name of Product");
+                    String name = scanner.nextLine();
+                    System.out.println("Enter price of product");
+                    Double price = Double.valueOf(scanner.nextLine());
+                    System.out.println("Enter type of product(GROCERIES, CHEMICALS, ELECTRONICS");
+                    String type = scanner.nextLine();
+                    Product prodcut = new Product(id, name, price, (ProductCategory.valueOf(type.toUpperCase(Locale.ROOT).trim())));
+                    System.out.println("Number of products");
+                    int count = Integer.valueOf(scanner.nextLine());
+                    storage.putProductIntoStorage(prodcut, count);
 
                     break;
                 case 2:
-                    System.out.println ("Enter product name ");
-                    String name1 = scanner.nextLine ();
-                    System.out.println ("How many products to remove");
-                    int num = Integer.valueOf (scanner.nextLine ());
-                    storage.removeProductFromStorage (name1, num);
+                    System.out.println("Enter product name ");
+                    String name1 = scanner.nextLine();
+                    System.out.println("How many products to remove");
+                    int num = Integer.valueOf(scanner.nextLine());
+                    storage.removeProductFromStorage(name1, num);
                     break;
                 case 3:
                     //Michala metoda
@@ -51,6 +51,7 @@ public class Main {
 
             }
         }
-
+    }
+}
 
 

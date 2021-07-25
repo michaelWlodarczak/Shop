@@ -38,4 +38,10 @@ this.storage=storage;
         }
         return finalPrice;
     }
+    @Override
+    public void displayStorage(Map<Product, Integer> storageMap) {
+        for (Map.Entry<Product, Integer> pair : storageMap.entrySet()) {
+            System.out.println("Name: " + pair.getKey() + "; Remain quantity: " + pair.getValue());
+        }
+    }
 }
