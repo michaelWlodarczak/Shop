@@ -2,21 +2,22 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Storage implements RecordOfGoods {
-    public Map<Product, Integer> productStorage = new HashMap<>();
-
+    public static  Map<Product, Integer> productStorage = new HashMap<>();
+public Product product;
     @Override
     public void putProductIntoStorage(Product product, int quantity) {
         if (productStorage.keySet().contains(product)) {
-            productStorage.put(product, productStorage.get(product) + quantity);
-        } else {
-            productStorage.put(product, quantity);
-        }
+                productStorage.put(product, productStorage.get(product) + quantity);
+            } else {
+                productStorage.put(product, quantity);
+            }
         System.out.println(productStorage.size());
     }
 
     @Override
-    public void removeProductFromStorage(Product product, int quantity) {
-        if (productStorage.keySet().contains(product)) {
+    public void removeProductFromStorage(String name, int quantity) {
+
+        if (productStorage.keySet().contains(product.getNameOfProduct ().equals (name))) {
             if (productStorage.get(product) - quantity < 0) {
                 System.out.println("Not enough items inside storage. Available products inside storage: " + productStorage.get(product));
             } else {
@@ -33,3 +34,4 @@ public class Storage implements RecordOfGoods {
         return productStorage;
     }
 }
+
