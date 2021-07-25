@@ -6,6 +6,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
+
         String menu = "Menu:\n" +
                 "1.Add product to Shop\n" +
                 "2.Remove product from Shop\n" +
@@ -34,6 +35,7 @@ public class Main {
                     System.out.println ("Number of products");
                     int count = Integer.valueOf (scanner.nextLine ());
                     storage.putProductIntoStorage (prodcut, count);
+
                     break;
                 case 2:
                     System.out.println ("Enter product name ");
@@ -49,8 +51,6 @@ public class Main {
 
             }
         }
-    }
-}
 
 
 
