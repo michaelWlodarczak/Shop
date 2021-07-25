@@ -1,13 +1,18 @@
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class Shop implements CartsMethods {
     Map<Product, Integer> shopCart = new HashMap<>();
 Storage storage = new Storage ();
 public Shop(Storage storage){
 this.storage=storage;
 };
+=======
+public class Shop extends Storage implements CartsMethods {
 
+
+    Map<Product, Integer> shopCart = new HashMap<>();
 
     @Override
     public void addItemsIntoCart(Product product, int quantity) {
@@ -32,4 +37,9 @@ this.storage=storage;
         return finalPrice;
     }
 
+    public void displayStorage(Map<Product,Integer> storageMap) {
+        for (Map.Entry<Product, Integer> pair : storageMap.entrySet()) {
+            System.out.println("Name: " + pair.getKey() + "; Remain quantity: " + pair.getValue());
+        }
+    }
 }

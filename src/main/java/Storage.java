@@ -29,7 +29,8 @@ public Product product;
         System.out.println(productStorage.size());
     }
 
-    public Map<Product,Integer> getStorage(){
+    @Override
+    public Map<Product, Integer> getStorage() {
         return productStorage;
     }
 }
