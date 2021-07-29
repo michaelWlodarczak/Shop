@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class Storage  implements RecordOfGoods {
@@ -35,6 +36,15 @@ public class Storage  implements RecordOfGoods {
     @Override
     public Map<Product, Integer> getStorage() {
         return productStorage;
+    }
+
+    @Override
+    public void displayStorage() {
+        Iterator<Map.Entry<Product, Integer>> it = productStorage.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry<Product, Integer> pair = it.next();
+            System.out.println("Name: "+ pair.getKey().getNameOfProduct () +" Price :"+pair.getKey ().getPriceOfProduct ()+ "Quantity available: " + pair.getValue());
+        }
     }
 }
 
