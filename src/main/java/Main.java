@@ -45,10 +45,19 @@ public class Main {
                     storage.removeProductFromStorage(name1, num);
                     break;
                 case 3:
-                    //Michala metoda
+                    storage.displayStorage ();
                     break;
                 case 4:
-
+                    System.out.println ("Name of product u want to add");
+                    String product = scanner.nextLine ();
+                    System.out.println ("Amount of products");
+                    int nums= Integer.valueOf (scanner.nextLine ());
+                    shop.addItemsIntoCart (product,nums);
+                    break;
+                case 5:
+                    System.out.println ("Your Recip:");
+                    shop.calculateFinalPrice ();
+                    break;
             }
         }
     }
